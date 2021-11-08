@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2 align='center'>Table</h2>
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for post in posts%}
+        <tr>
+            <th scope="row">{{post.id}}</th>
+            <td>{{post.name}}</td>
+            <td>{{post.desc}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
